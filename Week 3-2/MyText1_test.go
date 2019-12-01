@@ -2,7 +2,7 @@ package Text
 
 import "testing"
 
-func TestMyFuckingText(t *testing.T){
+func TestText(t *testing.T){
 	e := Text(2,3)
 
 	if e != 5 {
