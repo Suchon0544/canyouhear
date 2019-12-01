@@ -1,0 +1,9 @@
+package myMath
+
+import 
+	"math"
+
+func math.Average(){
+	v:=Average(3,5)
+
+}
