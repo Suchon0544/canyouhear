@@ -1,9 +1,6 @@
 package myMath
 
-import 
-	"math"
-
-func math.Average(){
-	v:=Average(3,5)
+func Average(a,b int) int {
+	return a/b
 
 }
