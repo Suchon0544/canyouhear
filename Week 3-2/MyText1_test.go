@@ -9,3 +9,6 @@ func TestText(t *testing.T){
 		t.Error("You go wrong, Dude.")
 	}
 }
+//incomplete , cannot testing
+
+//the other i have to write incomplete ,but i typing umcomplete
