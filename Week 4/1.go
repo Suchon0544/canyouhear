@@ -3,5 +3,6 @@ package main
 import "fmt"
 
 func main(){
-	count := [3]string{first , second , third , forth}
+	count := [4]string{"first" , "second" , "third" , "forth"}
+	fmt.Println(count)
 }
