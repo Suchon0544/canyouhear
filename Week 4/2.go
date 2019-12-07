@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main(){
-	count := [4]string{"first" , "second" , "third" , "forth"}
+	count := [5]string{"first" , "second" , "third" , "forth" , "fifth"}
 	fmt.Println(count)
 	Length := len(count)
 	fmt.Println(Length)
