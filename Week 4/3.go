@@ -8,4 +8,5 @@ func main(){
 	Length := len(count)
 	fmt.Println(Length)
 	fmt.Println(count[1])
+	//in "[]" is order that depend on index
 }
