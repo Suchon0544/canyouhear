@@ -6,5 +6,5 @@ func main(){
 	count := [4]string{"first" , "second" , "third" , "forth"}
 	fmt.Println(count)
 	Length := len(count)
-	fmt.Printin(Length)
+	fmt.Println(Length)
 }
