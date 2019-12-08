@@ -1,12 +1,16 @@
 package main
 
-import "fmt"
-
+import	(
+	"fmt"
+	"reflect"
+)
+//you have to import "reflect"
 func main(){
 	orders := [] string {"Eins","Zwei","Drei","Viert"}
 	orders2 := [] string {"Wu","Liu","Qi","Ba"}
 	fmt.Println(orders)
 	fmt.Println(orders2)
+	fmt.Println(reflect.DeepEqual(orders , orders2))
 	fmt.Println("---------------------")
 
 	copy(orders , orders2)
