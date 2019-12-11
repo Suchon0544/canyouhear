@@ -43,3 +43,5 @@ func main() {
 	}
 	fmt.Println("See Ya!!")
 }
+
+//there's error. they didn't show "See Ya!" i'll solve that later.
