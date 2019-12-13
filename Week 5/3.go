@@ -18,3 +18,5 @@ func main() {
 //so it's how they work at the first should be 3*2
 // next (3*2)*1 (number == 0 now)
 //that why fac(3) == 6
+
+//for me that similar for(loop) they work almost same way ,but diiferece called
