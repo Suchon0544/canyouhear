@@ -13,3 +13,8 @@ func main() {
 	fac := factorial(3)
 	fmt.Println(fac)
 }
+
+// they work like real factorial((n!-1) *n)
+//so it's how they work at the first should be 3*2
+// next (3*2)*1 (number == 0 now)
+//that why fac(3) == 6
