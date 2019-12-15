@@ -7,6 +7,7 @@ func count(numOrd int) func(int) int {
 		return numOrd + numAra
 	}
 }
+//d**m they plus each other
 
 func main() {
 	var num1 int
