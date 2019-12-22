@@ -3,10 +3,13 @@ package main
 import "fmt"
 
 func iwannarun(f int) int {
-	return f * 2
+	if f > 12 {
+		return (f * 12) + 24
+	}
+	return f * 12
 }
 
 func main() {
-	a := iwannarun(12)
+	a := iwannarun(20)
 	fmt.Println(a)
 }
