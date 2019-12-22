@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	c := []int{}
-	a := 2
-	for a <= 100 {
-		b := a * 12
-		c = append(c, b)
-		fmt.Println(c)
+	a := 1
+	for {
 		a := a + 3
+		b := a + 12
+		fmt.Println(b)
+		if a <= 20 {
+			break
+		}
 	}
 }
