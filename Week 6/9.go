@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println("Please enter your number = ")
 	var a int
 	fmt.Scan(&a)
 	if a*15 < 100 {
