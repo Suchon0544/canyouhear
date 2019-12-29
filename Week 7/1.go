@@ -15,6 +15,6 @@ func main() {
 	GoC.track = 1
 
 	fmt.Println("Music name :", GoC.name)
-	fmt.Println("Composer :", GoC.name)
-	fmt.Println("Track :", GoC.name)
+	fmt.Println("Composer :", GoC.composer)
+	fmt.Println("Track :", GoC.track)
 }
