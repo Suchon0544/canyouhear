@@ -12,3 +12,5 @@ func heard(string)string {
 		return Friday n night
 	}
 }
+
+// didnt pass the test yet , I'll edit later
