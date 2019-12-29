@@ -12,6 +12,6 @@ func main() {
 	kV[0] = knightVol2{"Silent Oath", "1"}
 	kV[1] = knightVol2{"Fight for Judge", "2"}
 
-	fmt.Println("track name : ", alb[8].name)
-	fmt.Println("track name : ", alb[5].name)
+	fmt.Println("track name : ", kV[8].name)
+	fmt.Println("track name : ", kV[5].name)
 }
