@@ -8,7 +8,7 @@ type Album struct {
 }
 
 func (alb Album) listen(){
-	fmt.Println("Have you ever hear this ," alb.name)
+	fmt.Println("Have you ever hear this ," , alb.name)
 }
 
 type music struct {
