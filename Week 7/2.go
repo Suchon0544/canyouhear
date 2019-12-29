@@ -12,5 +12,5 @@ func main() {
 	alb[8] = Album{"C18H27NO3", "9"}
 
 	fmt.Println(alb[8])
-	fmt.Println(alb[8].name)
+	fmt.Println("track name : ", alb[8].name)
 }
