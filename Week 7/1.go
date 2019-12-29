@@ -2,22 +2,19 @@ package main
 
 import "fmt"
 
-type songs struct {
-	name string
+type Album struct {
+	name     string
 	composer string
-	track int
+	track    int
 }
 
-func (music songs) listen() {
-	fmt.Println("Have you ever hear this ," music.name)
-}
+func main() {
+	GoC := new(Album)
+	GoC.name = "Grimoire of Crimson"
+	GoC.composer = "Team Grimoire"
+	GoC.track = 1
 
-type playlist struct {
-	library string
-	songs
-}
-
-func main(){
-	playlist.name = "MIC Drop"
-	playlist.listen()
+	fmt.Println("Music name :", GoC.name)
+	fmt.Println("Composer :", GoC.name)
+	fmt.Println("Track :", GoC.name)
 }
