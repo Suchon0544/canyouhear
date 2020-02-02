@@ -6,15 +6,22 @@ import (
 )
 
 func desk() []int {
-	dsk := make([]int, 0)
+	Dsk := make([]int, 0)
 	a := rand.Intn(13)
 	b := rand.Intn(13)
 	c := rand.Intn(13)
 	d := rand.Intn(13)
 	e := rand.Intn(13)
 
-	dsk = append(dsk, a, b, c, d, e)
-	return dsk
+	Dsk = append(Dsk, a, b, c, d, e)
+	return Dsk
+
+}
+
+func newcard() {
+	f := rand.Intn(13)
+	Dsk = append(Dsk, f)
+	return Dsk
 
 }
 
