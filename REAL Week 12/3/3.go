@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-type dep struct {
-	dep float64
+type banking struct {
+	deposit float64
 }
 
-func deposit(dep *Dep) float64 {
+func (dep *Deposit) {
 	fmt.Print("Plaese enter your deposit = ")
 	fmt.Scan(&dep)
 	return dep
@@ -20,8 +20,7 @@ func interest(dep *Dep) float64 {
 
 func depositing(mon float64) float64 {
 	fmt.Scan(&mon)
-	depo := dep
-	total := depo + mon
+	total := dep + mon
 	return total
 
 }
