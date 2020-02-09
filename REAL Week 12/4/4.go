@@ -2,21 +2,21 @@ package main
 
 import "fmt"
 
-type Country struct{
-	name string
-	lang string
+type Country struct {
+	name        string
+	lang        string
 	capitalcity string
 }
 
-func correcting(co *Country){
+func correcting(co *Country) {
 	co.lang = "British English"
 }
 
-func main(){
-	var country := Country{
-		name : "United Kingdom of Great Britain and Northern Ireland",
-		lang : "English",
-		capitalcity : "London",
+func main() {
+	var country = Country{
+		name:        "United Kingdom of Great Britain and Northern Ireland | ",
+		lang:        "English | ",
+		capitalcity: "London",
 	}
 
 	correcting(&country)
