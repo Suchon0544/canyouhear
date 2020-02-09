@@ -2,30 +2,16 @@ package main
 
 import "fmt"
 
-type banking struct {
-	deposit float64
-}
-
-func (dep *Deposit) {
+func main() {
+	var dep int
 	fmt.Print("Plaese enter your deposit = ")
 	fmt.Scan(&dep)
-	return dep
-}
 
-func interest(dep *Dep) float64 {
-	inr := 2.125 / 100
-	inter := dep * inr
-	return inter
-}
+	inter := (dep * 2) / 100
 
-func depositing(mon float64) float64 {
-	fmt.Scan(&mon)
-	total := dep + mon
-	return total
+	balance := dep + inter
 
-}
-
-func main() {
-	de := deposit(1)
-	fmt.Print(fmt.Sprintf("Your interest = %v Bath", de))
+	fmt.Println(fmt.Sprintf("Your Deposit = %v", dep))
+	fmt.Println(fmt.Sprintf("Your interst = %v", inter))
+	fmt.Println(fmt.Sprintf("Your Balance = %v", balance))
 }
