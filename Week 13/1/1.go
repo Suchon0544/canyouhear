@@ -4,13 +4,17 @@ import "fmt"
 
 var pl [33]playlist
 
+type player interface {
+	allmusic()
+}
+
 type playlist struct {
 	name   string
 	artist string
 }
 
 func allmusic(pl playlist) {
-	fmt.Println(fmt.Sprintf("Name : %v  Artist : %v", pl.name, pl.artist))
+	fmt.Println(fmt.Sprintf("Name : %v  Artist : %v \n ", pl.name, pl.artist))
 }
 
 func main() {
@@ -47,6 +51,4 @@ func main() {
 	pl[30] = playlist{name: "Vitamins", artist: "MILI"}
 	pl[31] = playlist{name: "What are you up to", artist: "Kang Daniel"}
 	pl[32] = playlist{name: "Just be Star", artist: "JBJ"}
-	p := allmusic(pl...)
-	fmt.Println(p)
 }
