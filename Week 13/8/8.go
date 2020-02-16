@@ -26,11 +26,11 @@ func main() {
 	m := playlist{name: "Just be Star", artist: "JBJ"}
 
 	fmt.Print("Playing next track from ")
-	x := rand.Intn(20)
+	x := rand.Intn(14)
 	fmt.Println(x)
 
 	fmt.Println("Now Playing")
-	if x == 20 {
+	if x == 13 {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", a.name, a.artist))
 	} else if x == 1 {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", b.name, b.artist))
