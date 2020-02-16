@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 type playlist struct {
 	name   string
@@ -29,9 +32,9 @@ func main() {
 	s := playlist{name: "New Rule", artist: "TXT"}
 	t := playlist{name: "On my mind", artist: "JBJ"}
 
-	var x int
-	fmt.Print("Choose your music : ")
-	fmt.Scan(&x)
+	fmt.Print("Playing next track from ")
+	x := rand.Intn(20)
+	fmt.Println(x)
 
 	fmt.Println("Now Playing")
 	if x == 20 {
@@ -56,7 +59,7 @@ func main() {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", j.name, j.artist))
 	} else if x == 10 {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", k.name, k.artist))
-	} else if x == 11{
+	} else if x == 11 {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", l.name, l.artist))
 	} else if x == 12 {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", m.name, m.artist))
