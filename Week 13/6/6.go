@@ -26,7 +26,7 @@ func main() {
 	m := playlist{name: "Just be Star", artist: "JBJ"}
 
 	fmt.Println("Random")
-	x := rand.Intn(20)
+	x := rand.Intn(14)
 	fmt.Println(x)
 
 	fmt.Println("Now Playing")
