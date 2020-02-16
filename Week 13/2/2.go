@@ -77,11 +77,23 @@ func main() {
 	}
 
 	var y string
-	fmt.Println("typing your artist's name :")
+	fmt.Print("typing your artist's name :")
 	fmt.Scan(&y)
-	if y == "MILI" {
+	if y == "mili" {
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", d.name, d.artist))
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", h.name, h.artist))
 		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", q.name, q.artist))
+	} else if y == "verdammt" {
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", a.name, a.artist))
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", g.name, g.artist))
+	} else if y == "agust d" {
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", b.name, b.artist))
+	} else if y == "bts" {
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", c.name, c.artist))
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", f.name, f.artist))
+	} else if y == "jbj" {
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", t.name, t.artist))
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", o.name, o.artist))
+		fmt.Println(fmt.Sprintf("Name : %v Artist : %v", i.name, i.artist))
 	}
 }
