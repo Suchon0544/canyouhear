@@ -4,35 +4,23 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"strconv"
 	"strings"
-	"sync"
-	"time"
 )
 
-type MyFile struct {
-	Path    string
-	Size    int64
-	Name    string
-	ModTime time.Time
-}
-
-/*type empty interface {
-}*/
-
 func getDrives() (r []string) {
-	var char string
-	drive := fmt.Scan(&char)
+	fmt.Print("Directory : ")
+	var drive string
+	fmt.Scan(&drive)
 	f, err := os.Open(drive + ":\\")
 	if err == nil {
 		d := string(drive) + ":/"
 		r = append(r, d)
 		f.Close()
 	}
-	return r
+	return
 }
 
-func FindFileFromExtension(extension []string, dir string, files *[]string) {
+func findFileFromExtension(extension []string, dir string, files *[]string) {
 	fs, err := ioutil.ReadDir(dir)
 	if err == nil {
 		for _, f := range fs {
@@ -44,19 +32,18 @@ func FindFileFromExtension(extension []string, dir string, files *[]string) {
 
 			if f.IsDir() {
 				path := dir + "/" + f.Name()
-				FindFileFromExtension(extension, path, files)
+				findFileFromExtension(extension, path, files)
 			}
 		}
 	}
 }
 
-func output(Path, Size []string) {
-	file, err := os.Create("Output.txt")
-	defer file.Close()
-	if err != nil {
-		return
+func main() {
+	drives := getDrives()
+	files := []string{}
+	for _, d := range drives {
+		findFileFromExtension([]string{}, d, &files)
 	}
-	for i := range Path {
-		file.WriteString(fmt.Sprintf("%v\t%v\r\n", Size[i], Path[i]))
-	}
+	fmt.Println(len(files))
+	fmt.Println(drives)
 }
