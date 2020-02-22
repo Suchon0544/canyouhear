@@ -78,7 +78,7 @@ func output(Path, Size []string) {
 		return
 	}
 	for i := range Path {
-		file.WriteString(fmt.Sprintf("%v\t%v\r\n", Size[i], Path[i]))
+		file.WriteString(fmt.Sprintf("%v\tbytes \t%v\r\n", Size[i], Path[i]))
 	}
 }
 
