@@ -38,17 +38,6 @@ func FindFileFromExtension(extension []string, dir string, files *[]string) {
 	}
 }
 
-func output(Path, Size []string) {
-	file, err := os.Create("Output.txt")
-	defer file.Close()
-	if err != nil {
-		return
-	}
-	for i := range Path {
-		file.WriteString(fmt.Sprintf("%v\t%v\r\n", Size[i], Path[i]))
-	}
-}
-
 /*func main() {
 	drives := getDrives()
 	files := []string{}
