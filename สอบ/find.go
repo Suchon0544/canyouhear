@@ -94,7 +94,7 @@ func main() {
 	wg.Add(len(drives))
 	for _, drive := range drives {
 
-		go FindFileFromExtension(extensionSlice, drive, &myfiles, &wg)
+		go FindFileFromExtension(extensionMap, drive, &myfiles, &wg)
 
 	}
 	wg.Wait()
