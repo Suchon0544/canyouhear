@@ -30,7 +30,7 @@ func getDrives() (r []string) {
 	return
 }
 
-func FindFileFromExtension(extension []string, dir string, files *[]MyFile, wg *sync.WaitGroup) {
+func FindFileFromExtension(extension map[string]string, dir string, files *[]MyFile, wg *sync.WaitGroup) {
 	defer wg.Done()
 	fs, err := ioutil.ReadDir(dir)
 	if err != nil {
