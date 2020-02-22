@@ -90,7 +90,6 @@ func main() {
 	fmt.Print("Extension :")
 	var ext string
 	fmt.Scan(&ext)
-	extensionSlice = append(extensionSlice, ext)
 	drives := getDrives()
 	wg.Add(len(drives))
 	for _, drive := range drives {
