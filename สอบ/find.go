@@ -1,23 +1,35 @@
-package find
+package main
 
 import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strconv"
 	"strings"
+	"sync"
+	"time"
 )
 
+type MyFile struct {
+	Path    string
+	Size    int64
+	Name    string
+	ModTime time.Time
+}
+
+/*type empty interface {
+}*/
+
 func getDrives() (r []string) {
-	for _, drive := range "ABCDEFGHIJKLMNOPQRSTUVWXYZ" {
-		/*f := fmt.Scan()*/
-		f, err := os.Open(string(drive) + ":\\")
-		if err == nil {
-			d := string(drive) + ":/"
-			r = append(r, d)
-			f.Close()
-		}
+	var char string
+	drive := fmt.Scan(&char)
+	f, err := os.Open(drive + ":\\")
+	if err == nil {
+		d := string(drive) + ":/"
+		r = append(r, d)
+		f.Close()
 	}
-	return
+	return r
 }
 
 func FindFileFromExtension(extension []string, dir string, files *[]string) {
@@ -48,13 +60,3 @@ func output(Path, Size []string) {
 		file.WriteString(fmt.Sprintf("%v\t%v\r\n", Size[i], Path[i]))
 	}
 }
-
-/*func main() {
-	drives := getDrives()
-	files := []string{}
-	for _, d := range drives {
-		FindFileFromExtension([]string{".jpg", ".gif"}, d, &files)
-	}
-	fmt.Println(len(files))
-	fmt.Println(drives)
-}*/
