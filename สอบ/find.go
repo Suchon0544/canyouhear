@@ -50,7 +50,6 @@ func FindFileFromExtension(extension []string, dir string, files *[]MyFile, wg *
 	}
 }
 
-
 func ProcessingExtension(dir string, f os.FileInfo, extension []string, files *[]MyFile, wg *sync.WaitGroup) {
 	defer wg.Done()
 	filename := f.Name()
@@ -85,16 +84,17 @@ func output(Path, Size []string) {
 
 func main() {
 	var wg sync.WaitGroup
-	t1 := time.Now()
 	myfiles := []MyFile{}
-	extensionMap := make(map[string]string)
-	/*extensionMap["jpg"] = ".jpg"*/
-	extensionMap["txt"] = ".txt"
+	extensionSlice := make([]string, 3)
+	fmt.Println("Extension :")
+	var ext string
+	fmt.Scan(&ext)
+	extensionSlice = append(extensionSlice, ext)
 	drives := getDrives()
 	wg.Add(len(drives))
 	for _, drive := range drives {
 
-		go FindFileFromExtension(extensionMap, drive, &myfiles, &wg)
+		go FindFileFromExtension(extensionSlice, drive, &myfiles, &wg)
 
 	}
 	wg.Wait()
@@ -105,11 +105,8 @@ func main() {
 		sizeFiles = append(sizeFiles, strconv.Itoa(int(pathToFiles.Size)))
 	}
 
-	t2 := time.Now()
-	diftime := t2.Sub(t1)
 	fmt.Println("total files = ", len(myfiles))
 	output(pathFiles, sizeFiles)
 	fmt.Println(pathFiles)
-	fmt.Println("total time = ", diftime)
 
 }
