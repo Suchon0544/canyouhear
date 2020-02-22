@@ -50,7 +50,7 @@ func FindFileFromExtension(extension []string, dir string, files *[]MyFile, wg *
 	}
 }
 
-func ProcessingExtension(dir string, f os.FileInfo, extension []string, files *[]MyFile, wg *sync.WaitGroup) {
+func ProcessingExtension(dir string, f os.FileInfo, extension map[string]string, files *[]MyFile, wg *sync.WaitGroup) {
 	defer wg.Done()
 	filename := f.Name()
 	index := strings.LastIndex(filename, ".")
@@ -85,8 +85,9 @@ func output(Path, Size []string) {
 func main() {
 	var wg sync.WaitGroup
 	myfiles := []MyFile{}
-	extensionSlice := make([]string, 3)
-	fmt.Println("Extension :")
+	extensionMap := make(map[string]string)
+	extensionMap["txt"] = ".txt"
+	fmt.Print("Extension :")
 	var ext string
 	fmt.Scan(&ext)
 	extensionSlice = append(extensionSlice, ext)
@@ -107,6 +108,5 @@ func main() {
 
 	fmt.Println("total files = ", len(myfiles))
 	output(pathFiles, sizeFiles)
-	fmt.Println(pathFiles)
 
 }
