@@ -21,7 +21,7 @@ func getDrives() (r []string) {
 	fmt.Print("Directory : ")
 	var drive string
 	fmt.Scan(&drive)
-	f, err := os.Open(drive + ":\\")
+	f, err := os.Open(strings.ToUpper(drive) + ":\\")
 	if err == nil {
 		d := string(drive) + ":/"
 		r = append(r, d)
