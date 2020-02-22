@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 )
 
 type MyFile struct {
@@ -85,10 +86,10 @@ func main() {
 	var wg sync.WaitGroup
 	myfiles := []MyFile{}
 	extensionMap := make(map[string]string)
-	extensionMap["txt"] = ".txt"
 	fmt.Print("Extension :")
 	var ext string
 	fmt.Scan(&ext)
+	extensionMap[ext] = fmt.Sprintf(".%v", ext)
 	drives := getDrives()
 	wg.Add(len(drives))
 	for _, drive := range drives {
